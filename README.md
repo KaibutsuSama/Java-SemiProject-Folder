@@ -9,7 +9,6 @@ Create time: 6/27/2022
 > Repo link: [Java-SemiProject-Folder](https://github.com/KaibutsuSama/Java-SemiProject-Folder)
 
 ## ⭐Introduction
---- 
 
 - 这些工程是在学习Java开发过程中做出来的一些半成品Project,主要目的是为了学习整合框架+库+数据库，不是很小体量的Demo，但也没实际用处。
 

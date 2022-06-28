@@ -18,6 +18,8 @@ public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private Long id;
+
     private String username;
 
     private String name;
@@ -28,7 +30,7 @@ public class Employee implements Serializable {
 
     private String sex;
 
-    private String idNumber;//身份证
+    private String idNumber;//身份证号码
 
     private Integer status;
 
@@ -41,4 +43,5 @@ public class Employee implements Serializable {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updateUser;
+
 }

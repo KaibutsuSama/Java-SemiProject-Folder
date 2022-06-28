@@ -17,4 +17,4 @@ Create time: 6/27/2022
 ## ⚡Catalog
 No | Repo | Using | Status 
 --- | --- | --- | ---
-1 | [Takeout-App Web system](https://github.com/KaibutsuSama/Java-SemiProject-Folder/tree/main/Takeout) | [Springboot/Mybatis-Plus/Vue.js/MySQL] | In progress
+1 | [Takeout-App Web system](https://github.com/KaibutsuSama/Java-SemiProject-Folder/tree/main/Takeout) | Springboot/Mybatis-Plus/Vue.js/MySQL | In progress

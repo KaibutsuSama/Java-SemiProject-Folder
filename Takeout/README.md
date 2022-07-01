@@ -22,3 +22,8 @@ A website system for catering companies,Includes two parts: System management ba
 
 - [x] 登录/Login
 - [x] 退出/Logout
+- [x] 添加员工/Add employee
+- [x] 分页查询/Paging query
+- [x] 新增食物分类/Add dish category
+- [x] 更新食物分类/Update dish category
+- [x] 删除食物分类/Delete dish category

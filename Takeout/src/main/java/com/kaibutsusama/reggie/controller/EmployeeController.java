@@ -25,7 +25,7 @@ import java.time.LocalDateTime;
 public class EmployeeController {
 
     @Autowired
-    EmployeeService employeeService;
+    private EmployeeService employeeService;
 
     /**
      * Employee Login
@@ -152,5 +152,7 @@ public class EmployeeController {
             return R.error("没查到");
         }
     }
+
+
 
 }

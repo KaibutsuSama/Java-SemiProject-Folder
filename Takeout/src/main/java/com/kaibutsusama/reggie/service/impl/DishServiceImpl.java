@@ -35,13 +35,17 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
         //菜品口味
         List<DishFlavor> flavors = dishDto.getFlavors();//将本该赋值给Dish表的flavor参数赋值给DishFlavor表
 
-        flavors.stream().map((item) -> {
-            item.setDishId(dishId);
-            return item;
-        }).collect(Collectors.toList());
+//        flavors.stream().map((item) -> {
+//            item.setDishId(dishId);
+//            return item;
+//        }).collect(Collectors.toList());
+//        System.out.println("stream"+flavors.toString());
+
+        //用lambda表达式好像比foreact表达式的时间复杂度低
 
         for (DishFlavor flavor : flavors) {
             flavor.setDishId(dishId);
+            System.out.println("foreact"+flavor.toString());
         }
 
 

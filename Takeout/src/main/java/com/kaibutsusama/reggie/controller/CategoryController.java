@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author KaibutsuSama
  * @date 2022/6/30
@@ -55,5 +57,24 @@ public class CategoryController {
     public R<String> delete(Long ids){
         categoryService.remove(ids);
         return R.success("删除成功");
+    }
+
+    /**
+     * 根据条件查询分类数据
+     * @param category
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Category>> list(Category category){ //也可以写String type,但是实体类对象通用性更好
+        //条件构造器
+        LambdaQueryWrapper<Category> categoryLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        //添加条件 type
+        categoryLambdaQueryWrapper.eq(category.getType()!=null,Category::getType,category.getType());
+        //排序条件
+        categoryLambdaQueryWrapper.orderByAsc(Category::getSort).orderByAsc(Category::getCreateTime);
+
+        List<Category> list = categoryService.list(categoryLambdaQueryWrapper);
+
+        return R.success(list);
     }
 }

@@ -27,3 +27,6 @@ A website system for catering companies,Includes two parts: System management ba
 - [x] 新增食物分类/Add dish category
 - [x] 更新食物分类/Update dish category
 - [x] 删除食物分类/Delete dish category
+- [ ] 图片的上传和下载/Image upload and download
+- [ ] 新增菜品/Add dish
+- [ ] 修改菜品/Upload dish

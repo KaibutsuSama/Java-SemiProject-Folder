@@ -1,8 +1,8 @@
 # Takeout-App Web system
 
-一个针对餐饮企业的网站系统，包括两部分。其后台管理系统主要提供给员工和管理人员，可以维护菜品、套餐、订单等内容。手机APP采用Html5开发，消费者可以通过手机APP浏览菜品、添加购物车、下订单等功能。
+一个Crud的餐饮的网站系统，后台管理系统主要提供给员工和管理人员，可以维护菜品、套餐等内容。
 
-A website system for catering companies,Includes two parts: System management backend and mobile app.Its backend management system is mainly provided to the staff and managers, which can maintain the content of dishes, packages, orders, etc. The mobile app is developed with Html5,through which consumers can browse dishes, add shopping carts, place orders, and other features.
+A crud website system for catering.Its backend management system is mainly provided to the staff and managers, which can maintain the content of dishes, packages, orders, etc.
 ## Developed with
 
 - IDEA v2021
@@ -20,13 +20,13 @@ A website system for catering companies,Includes two parts: System management ba
 
 # Features
 
-- [x] 登录/Login
-- [x] 退出/Logout
-- [x] 添加员工/Add employee
-- [x] 分页查询/Paging query
-- [x] 新增食物分类/Add dish category
-- [x] 更新食物分类/Update dish category
-- [x] 删除食物分类/Delete dish category
-- [ ] 图片的上传和下载/Image upload and download
-- [ ] 新增菜品/Add dish
-- [ ] 修改菜品/Upload dish
+- 员工管理模块
+登录 / 添加员工 / 修改员工 / 禁用员工 / 分页查询
+- 菜品分类模块
+新增菜品套餐分类 / 修改分类 / 删除分类 / 分页查询
+- 菜品管理模块
+批量增删 / 批量启售 / 分页查询
+- 套餐管理模块
+批量增删 / 批量启售 / 分页查询
+- 订单模块
+懒的弄手机验证，不做了。

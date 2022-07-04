@@ -7,6 +7,7 @@ import com.kaibutsusama.reggie.common.R;
 import com.kaibutsusama.reggie.dto.DishDto;
 import com.kaibutsusama.reggie.entity.Category;
 import com.kaibutsusama.reggie.entity.Dish;
+import com.kaibutsusama.reggie.entity.Setmeal;
 import com.kaibutsusama.reggie.service.CategoryService;
 import com.kaibutsusama.reggie.service.DishFlavorService;
 import com.kaibutsusama.reggie.service.DishService;
@@ -17,6 +18,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -125,5 +127,15 @@ public class DishController {
 
         dishService.deleteWithFlavor(ids);
         return R.success("删除成功");
+    }
+
+    @GetMapping("/list")
+    public R<List<Dish>> list(Dish dish){
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(dish.getCategoryId()!=null,Dish::getCategoryId,dish.getCategoryId());
+        queryWrapper.orderByAsc(Dish::getSort).orderByAsc(Dish::getCreateTime);
+
+        List<Dish> list = dishService.list(queryWrapper);
+        return R.success(list);
     }
 }
